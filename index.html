@@ -6,8 +6,18 @@
   <title>Ruffle SWF Player</title>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; }
-    #player { width: 100%; height: 100vh; }
+    /* Remove margin and padding to ensure full-screen view */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+    /* Make the player fill the entire screen */
+    #player {
+      width: 100vw;
+      height: 100vh;
+    }
   </style>
 </head>
 <body>
